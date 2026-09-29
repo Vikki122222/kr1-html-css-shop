@@ -1,0 +1,24 @@
+*   [33mc8a20bf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #5 from Vikki122222/feature/multi-page-navigation
+[31m|[m[32m\[m  
+[31m|[m * [33m456e9ce[m[33m ([m[1;31morigin/feature/multi-page-navigation[m[33m, [m[1;32mfeature/multi-page-navigation[m[33m)[m feat: add multi-page structure navigation and anchors
+[31m|[m * [33me0f79bd[m Add multi-page navigation
+[31m|[m[31m/[m  
+*   [33md23f4d9[m Merge pull request #4 from Vikki122222/feature/css-architecture-states
+[33m|[m[34m\[m  
+[33m|[m * [33mc6102e9[m[33m ([m[1;31morigin/feature/css-architecture-states[m[33m, [m[1;32mfeature/css-architecture-states[m[33m)[m refactor: organize CSS variables and states
+[33m|[m[33m/[m  
+*   [33m71018f7[m Merge pull request #3 from Vikki122222/feature/form-modal-validation
+[35m|[m[36m\[m  
+[35m|[m * [33m2309cfa[m[33m ([m[1;31morigin/feature/form-modal-validation[m[33m, [m[1;32mfeature/form-modal-validation[m[33m)[m feat: add order form modal and validation
+[35m|[m[35m/[m  
+*   [33m3b1eafb[m Merge pull request #2 from Vikki122222/feature/html-css-start-page
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m14a8d2a[m[33m ([m[1;31morigin/feature/html-css-start-page[m[33m, [m[1;32mfeature/html-css-start-page[m[33m)[m feat: add semantic HTML structure and base CSS styles
+[1;31m|[m[1;31m/[m  
+* [33m6989a62[m Update README.md
+*   [33m70fdec5[m Merge pull request #1 from Vikki122222/feature/start-page
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m50e9071[m[33m ([m[1;31morigin/feature/start-page[m[33m, [m[1;32mfeature/start-page[m[33m)[m feat: add project description section
+[1;33m|[m[1;33m/[m  
+* [33md1e841d[m docs: add project status to README
+* [33m850caad[m feat: initialize frontend project structure
