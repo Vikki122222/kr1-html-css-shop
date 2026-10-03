@@ -42,6 +42,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -50,23 +54,13 @@ body {
     background-color: var(--color-bg);
 }
 
-
-
-header,
-main,
-footer {
+main {
     padding: var(--space-lg);
 }
 
-
-
-header {
-    background-color: var(--color-surface);
-}
-
-
-footer {
-    background-color: var(--color-surface);
+:target {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 4px;
 }
 
 
@@ -86,36 +80,33 @@ a:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 3px;
 }
-    /*
-      Ограничиваем ширину содержимого шапки,
-      чтобы оно не растягивалось слишком сильно на широких экранах.
-    */
+
+
+/* ===============================
+   Шапка сайта
+   =============================== */
+
 .site-header {
-    max-width: 1100px;
+    background-color: var(--color-surface);
+}
+
+.site-header__inner {
+    max-width: var(--container-width);
     margin: 0 auto;
+    padding: var(--space-lg);
 }
 
-/*
-  Оформляем текстовый логотип.
-*/
-.site-logo {
-    font-weight: bold;
-    text-decoration: none;
+.site-header__logo {
+    font-weight: 700;
     color: var(--color-text);
+    text-decoration: none;
 }
 
-/*
-  Убираем стандартные отступы и маркеры списка навигации.
-*/
-.site-nav__list {
-    padding: 0;
-    margin: 16px 0 0;
-    list-style: none;
-}
 
-/*
-  Добавляем расстояние между пунктами меню.
-*/
+/* ===============================
+   Навигация
+   =============================== */
+
 .site-nav__list {
     display: flex;
     flex-wrap: wrap;
@@ -127,11 +118,11 @@ a:focus-visible {
     list-style: none;
 }
 
+.site-nav__item {
+    margin: 0;
+}
 
-/*
-  Оформляем ссылки меню.
-*/
-.site-nav__list a {
+.site-nav__link {
     display: inline-block;
     padding: var(--space-sm) var(--space-md);
     color: var(--color-primary);
@@ -139,14 +130,24 @@ a:focus-visible {
     border-radius: var(--radius-sm);
 }
 
-.site-nav__list a:hover {
+.site-nav__link:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.site-nav__link:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.site-nav__link--active {
     color: var(--color-white);
     background-color: var(--color-primary);
 }
 
 
 /* ===============================
-   4. Компоненты страницы
+   4. Основные компоненты страницы
    =============================== */
 
 .hero {
@@ -162,52 +163,106 @@ a:focus-visible {
     margin: 0 auto var(--space-xl);
 }
 
-.section h2 {
+.section__title {
     margin-top: 0;
 }
 
 
+/* ===============================
+   Карточка товара
+   =============================== */
 
 .product-card {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
-    margin-bottom: 0;
     padding: var(--space-md);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     background-color: var(--color-bg);
 }
 
-.product-card .button {
+.product-card:hover {
+    border-color: var(--color-primary);
+}
+
+.product-card--featured {
+    border-color: var(--color-primary);
+}
+
+.product-card--discount {
+    border-color: var(--color-danger);
+}
+
+.product-card__title {
+    margin: 0;
+    color: var(--color-text);
+}
+
+.product-card__description {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.product-card__price {
+    margin: 0;
+    font-weight: 700;
+}
+
+.product-card--discount .product-card__price {
+    color: var(--color-danger);
+}
+
+.product-card__button {
     margin-top: auto;
     align-self: flex-start;
 }
 
 
-.product-card:hover {
-    border-color: var(--color-primary);
+/* ===============================
+   Сетка товаров
+   =============================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
 }
 
-.product-card h3 {
-    margin-top: 0;
-}
 
+/* ===============================
+   Кнопки
+   =============================== */
 
 .button {
     display: inline-block;
     padding: var(--space-sm) var(--space-md);
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    text-decoration: none;
     border: none;
     border-radius: var(--radius-sm);
+    font: inherit;
+    text-decoration: none;
     cursor: pointer;
 }
 
+.button--primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
 
-.button:hover {
+.button--primary:hover {
+    color: var(--color-white);
     background-color: var(--color-primary-dark);
+}
+
+.button--secondary {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+}
+
+.button--secondary:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
 }
 
 .button:focus-visible {
@@ -215,15 +270,17 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
-.button:disabled {
+.button:disabled,
+.button--disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
 
 
-/*
-  Дополнительный информационный блок.
-*/
+/* ===============================
+   Дополнительный информационный блок
+   =============================== */
+
 .aside-info {
     max-width: var(--container-width);
     margin: 0 auto var(--space-xl);
@@ -234,7 +291,7 @@ a:focus-visible {
 
 
 /* ===============================
-   5. Форма и модальное окно
+   5. Модальное окно
    =============================== */
 
 .order-dialog {
@@ -248,18 +305,27 @@ a:focus-visible {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.form-field {
+.order-dialog__title {
+    margin-top: 0;
+}
+
+
+/* ===============================
+   Форма заявки
+   =============================== */
+
+.order-form__field {
     margin-bottom: var(--space-md);
 }
 
-.form-field label {
+.order-form__label {
     display: block;
     margin-bottom: var(--space-xs);
 }
 
-.form-field input,
-.form-field select,
-.form-field textarea {
+.order-form__input,
+.order-form__select,
+.order-form__textarea {
     width: 100%;
     padding: 10px 12px;
     border: 1px solid var(--color-border);
@@ -267,28 +333,39 @@ a:focus-visible {
     font: inherit;
 }
 
-.form-field input[type="checkbox"] {
+.order-form__input--checkbox {
     width: auto;
 }
 
-.form-field small {
+.order-form__hint {
     display: block;
     margin-top: var(--space-xs);
     color: var(--color-muted);
 }
 
-.form-field input:hover,
-.form-field select:hover,
-.form-field textarea:hover {
+.order-form__input:hover,
+.order-form__select:hover,
+.order-form__textarea:hover {
     border-color: var(--color-primary);
 }
 
-.form-field input:focus-visible,
-.form-field select:focus-visible,
-.form-field textarea:focus-visible,
-.form-actions button:focus-visible {
+.order-form__input:focus-visible,
+.order-form__select:focus-visible,
+.order-form__textarea:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 3px;
+}
+
+.order-form__label--checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.order-form__actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
 }
 
 [aria-invalid="true"] {
@@ -296,18 +373,10 @@ a:focus-visible {
 }
 
 
-/*
-  Кнопки формы.
-*/
-.form-actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 20px;
-}
+/* ===============================
+   Сообщение об успешной отправке
+   =============================== */
 
-/*
-  Сообщение об успешной отправке.
-*/
 .success-message {
     max-width: var(--container-width);
     margin: var(--space-lg) auto;
@@ -316,6 +385,11 @@ a:focus-visible {
     background-color: var(--color-success-bg);
 }
 
+
+/* ===============================
+   Хлебные крошки
+   =============================== */
+
 .breadcrumbs {
     max-width: var(--container-width);
     margin: 0 auto var(--space-md);
@@ -323,30 +397,19 @@ a:focus-visible {
     color: var(--color-muted);
 }
 
-.breadcrumbs a {
+.breadcrumbs__link {
     color: var(--color-primary);
 }
 
-.breadcrumbs span::before {
+.breadcrumbs__current::before {
     content: " / ";
     color: var(--color-muted);
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
-:target {
-    outline: 2px dashed var(--color-primary);
-    outline-offset: 4px;
-}
-
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-}
+/* ===============================
+   Каталог
+   =============================== */
 
 .catalog-layout {
     max-width: var(--container-width);
@@ -365,32 +428,37 @@ html {
     background-color: var(--color-surface);
 }
 
-.catalog-products {
+.catalog-layout__products {
     grid-area: products;
 }
 
-.filters-form {
+
+/* ===============================
+   Фильтры каталога
+   =============================== */
+
+.catalog-filters__form {
     display: grid;
     gap: var(--space-md);
 }
 
-.filters-form fieldset {
+.catalog-filters__group {
     margin: 0;
     padding: var(--space-md);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
 }
 
-.filters-form legend {
+.catalog-filters__legend {
     font-weight: 700;
 }
 
-.filters-form label {
+.catalog-filters__label {
     display: block;
     margin-bottom: var(--space-sm);
 }
 
-.filters-form input[type="number"] {
+.catalog-filters__input {
     width: 100%;
     padding: 8px 10px;
     border: 1px solid var(--color-border);
@@ -398,3 +466,93 @@ html {
     font: inherit;
 }
 
+.catalog-filters__input:hover {
+    border-color: var(--color-primary);
+}
+
+.catalog-filters__input:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+
+/* ===============================
+   Подвал сайта
+   =============================== */
+
+.site-footer {
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+}
+
+.site-footer__text {
+    margin: 0 0 var(--space-xs);
+}
+
+.site-footer__text:last-child {
+    margin-bottom: 0;
+}
+
+/* ===============================
+   6. Адаптивность
+   =============================== */
+
+/* Планшеты */
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalog-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "filters"
+            "products";
+    }
+}
+
+
+/* Мобильные устройства */
+@media (max-width: 600px) {
+    main {
+        padding: var(--space-md);
+    }
+
+    .site-header__inner {
+        padding: var(--space-md);
+    }
+
+    .site-nav__list {
+        gap: var(--space-sm);
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .order-form__actions {
+        flex-direction: column;
+    }
+
+    .order-form__actions .button {
+        width: 100%;
+    }
+
+    .site-footer {
+        padding: var(--space-md);
+    }
+}
+
+/* ===============================
+   7. Доступность
+   =============================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
