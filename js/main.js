@@ -41,9 +41,10 @@ orderForm.addEventListener('submit', (event) => {
     // потому что backend пока не подключён.
     event.preventDefault();
 
-    // Сбрасываем предыдущие признаки ошибок.
+    // Получаем все элементы формы.
     const formElements = Array.from(orderForm.elements);
 
+    // Сбрасываем предыдущие признаки ошибок.
     formElements.forEach((element) => {
         if (element.willValidate) {
             element.removeAttribute('aria-invalid');
@@ -60,6 +61,7 @@ orderForm.addEventListener('submit', (event) => {
 
         // Показываем стандартные сообщения браузера.
         orderForm.reportValidity();
+
         return;
     }
 
