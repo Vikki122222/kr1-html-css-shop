@@ -1,167 +1,454 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+    <!-- ---------------------- -->
+    <!-- Основные настройки страницы -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог товаров</title>
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AEGIS COSPLAY — магазин косплей-костюмов</title>
+
+    <meta
+            name="description"
+            content="AEGIS COSPLAY — учебный интернет-магазин косплей-костюмов и аксессуаров."
+    >
+
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Подключение JavaScript -->
     <script src="js/main.js" defer></script>
+
+    <!-- Данные для отображения ссылки -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Учебный интернет-магазин">
-    <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
-    <meta property="og:image" content="https://username.github.io/kr1-html-css-shop/images/preview.jpg">
 
+    <meta
+            property="og:title"
+            content="AEGIS COSPLAY"
+    >
+
+    <meta
+            property="og:description"
+            content="Косплей-костюмы и аксессуары для фестивалей, фотосессий и ярких образов."
+    >
+
+    <meta
+            property="og:image"
+            content="images/athena.jpg"
+    >
 </head>
-<body>
-<header class="site-header">
-    <div class="site-header__inner">
-        <a class="site-header__logo" href="index.html">ShopProject</a>
 
-        <nav class="site-nav" aria-label="Основная навигация">
+
+<body>
+
+
+<!-- ---------------------- -->
+<!-- Шапка сайта -->
+
+<header class="site-header">
+
+    <div class="site-header__inner">
+
+        <!-- Логотип -->
+        <a
+                class="site-header__logo"
+                href="index.html"
+        >
+            AEGIS COSPLAY
+        </a>
+
+
+        <!-- Основное меню -->
+        <nav
+                class="site-nav"
+                aria-label="Основная навигация"
+        >
+
             <ul class="site-nav__list">
 
                 <li class="site-nav__item">
+
                     <a
                             class="site-nav__link site-nav__link--active"
                             href="index.html"
                     >
                         Главная
                     </a>
+
                 </li>
 
                 <li class="site-nav__item">
-                    <a class="site-nav__link" href="catalog.html">
+
+                    <!-- Якорная ссылка ведёт к преимуществам -->
+                    <a
+                            class="site-nav__link"
+                            href="#advantages"
+                    >
+                        Преимущества
+                    </a>
+
+                </li>
+
+
+                <li class="site-nav__item">
+
+                    <!-- Якорная ссылка ведёт к блоку популярных товаров -->
+                    <a
+                            class="site-nav__link"
+                            href="#popular"
+                    >
+                        Популярные товары
+                    </a>
+
+                </li>
+
+
+                <li class="site-nav__item">
+
+                    <a
+                            class="site-nav__link"
+                            href="catalog.html"
+                    >
                         Каталог
                     </a>
+
                 </li>
 
+
                 <li class="site-nav__item">
-                    <a class="site-nav__link" href="contacts.html">
+
+                    <a
+                            class="site-nav__link"
+                            href="contacts.html"
+                    >
                         Контакты
                     </a>
+
                 </li>
 
             </ul>
+
         </nav>
+
     </div>
+
 </header>
+
+
+<!-- ---------------------- -->
+<!-- Основная часть страницы -->
+
 <main>
-    <!-- Основное содержимое страницы -->
+
+
+    <!-- ---------------------- -->
+    <!-- Главный экран -->
+
     <section class="hero">
-        <h1>Учебный интернет-магазин</h1>
+
+        <h1>
+            Создай образ своего героя
+        </h1>
+
         <p>
-            Это стартовая страница учебного frontend-проекта.
-            В дальнейшем на её основе будет разработан многостраничный сайт
-            интернет-магазина или каталога услуг.
+            Косплей-костюмы и аксессуары для фестивалей,
+            фотосессий и ярких перевоплощений.
         </p>
-        <a class="button button--primary" href="#popular">
-            Перейти к товарам
+
+        <!-- Якорная ссылка ведёт к популярным товарам -->
+        <a
+                class="button button--primary"
+                href="#popular"
+        >
+            Смотреть костюмы
         </a>
+
     </section>
 
-    <section class="section" id="advantages">
-        <h2 class="section__title">Преимущества проекта</h2>
+
+    <!-- ---------------------- -->
+    <!-- Преимущества магазина -->
+
+    <section
+            class="section"
+            id="advantages"
+    >
+
+        <h2 class="section__title">
+            Почему выбирают AEGIS COSPLAY
+        </h2>
 
         <ul class="advantages-list">
-            <li>понятная HTML-структура;</li>
-            <li>семантические блоки страницы;</li>
-            <li>подключение внешнего CSS-файла;</li>
-            <li>подготовка к разработке многостраничного сайта.</li>
+
+            <li>
+                детализированные косплей-костюмы;
+            </li>
+
+            <li>
+                разные размеры и варианты образов;
+            </li>
+
+            <li>
+                аксессуары для завершения образа;
+            </li>
+
+            <li>
+                костюмы для фестивалей и фотосессий.
+            </li>
+
         </ul>
+
     </section>
 
-    <section class="section" id="popular">
-        <h2 class="section__title">Популярные товары</h2>
 
+    <!-- ---------------------- -->
+    <!-- Популярные костюмы -->
+
+    <section
+            class="section"
+            id="popular"
+    >
+
+        <h2 class="section__title">
+            Популярные костюмы
+        </h2>
+
+
+        <!-- Сетка с карточками товаров -->
         <div class="products-grid">
+
+
+            <!-- ---------------------- -->
+            <!-- Карточка Афины -->
+
             <article class="product-card product-card--featured">
-                <h3 class="product-card__title">Товар 1</h3>
+
+                <!-- Значок ХИТ расположен поверх карточки -->
+                <span class="product-card__badge">
+                    ХИТ
+                </span>
+
+
+                <!-- Фото ведёт на подробную страницу товара -->
+                <a
+                        class="product-card__image-link"
+                        href="product.html"
+                >
+
+                    <img
+                            class="product-card__image"
+                            src="images/athena.jpg"
+                            alt="Косплей-костюм Афины"
+                    >
+
+                </a>
+
+
+                <h3 class="product-card__title">
+                    Костюм Афины
+                </h3>
+
+
                 <p class="product-card__description">
-                    Краткое описание учебного товара.
+                    Образ богини мудрости в античном стиле
+                    с декоративной бронёй и золотыми элементами.
                 </p>
+
+
                 <p class="product-card__price">
-                    Цена: 1000 руб.
+                    Цена: 12 900 руб.
                 </p>
+
+
+                <!-- data-product хранит название выбранного товара -->
                 <button
                         class="button button--primary product-card__button"
                         type="button"
-                        data-product="Товар 1"
+                        data-product="Костюм Афины"
                 >
                     Заказать
                 </button>
+
             </article>
 
-            <article class="product-card">
-                <h3 class="product-card__title">Товар 2</h3>
-                <p class="product-card__description">
-                    Краткое описание учебного товара.
-                </p>
-                <p class="product-card__price">
-                    Цена: 1500 руб.
-                </p>
-                <button
-                        class="button button--primary product-card__button"
-                        type="button"
-                        data-product="Товар 2"
-                >
-                    Заказать
-                </button>
-            </article>
+
+            <!-- ---------------------- -->
+            <!-- Лунная волшебница -->
 
             <article class="product-card">
-                <h3 class="product-card__title">Товар 3</h3>
+
+                <a
+                        class="product-card__image-link"
+                        href="#"
+                >
+
+                    <img
+                            class="product-card__image product-card__image--moon"
+                            src="images/moon-sorceress.jpg"
+                            alt="Косплей-костюм Лунной волшебницы"
+                    >
+
+                </a>
+
+
+                <h3 class="product-card__title">
+                    Лунная волшебница
+                </h3>
+
+
                 <p class="product-card__description">
-                    Краткое описание учебного товара.
+                    Фэнтезийный костюм в светлых оттенках
+                    с декоративными элементами и аксессуарами.
                 </p>
+
+
                 <p class="product-card__price">
-                    Цена: 2000 руб.
+                    Цена: 9 500 руб.
                 </p>
+
+
                 <button
                         class="button button--primary product-card__button"
                         type="button"
-                        data-product="Товар 3"
+                        data-product="Лунная волшебница"
                 >
                     Заказать
                 </button>
+
             </article>
+
+
+            <!-- ---------------------- -->
+            <!-- Тёмная охотница -->
+
+            <article class="product-card">
+
+                <a
+                        class="product-card__image-link"
+                        href="#"
+                >
+
+                    <img
+                            class="product-card__image"
+                            src="images/dark-huntress.jpg"
+                            alt="Косплей-костюм Тёмной охотницы"
+                    >
+
+                </a>
+
+
+                <h3 class="product-card__title">
+                    Тёмная охотница
+                </h3>
+
+
+                <p class="product-card__description">
+                    Детализированный образ в тёмном фэнтезийном стиле
+                    для фестивалей и тематических фотосессий.
+                </p>
+
+
+                <p class="product-card__price">
+                    Цена: 11 400 руб.
+                </p>
+
+
+                <button
+                        class="button button--primary product-card__button"
+                        type="button"
+                        data-product="Тёмная охотница"
+                >
+                    Заказать
+                </button>
+
+            </article>
+
         </div>
+
     </section>
 
+
+    <!-- ---------------------- -->
+    <!-- Дополнительная информация -->
 
     <aside class="aside-info">
-        <h2>Информация для студентов</h2>
+
+        <h2>
+            Найди свой идеальный образ
+        </h2>
+
         <p>
-            На следующих практических занятиях этот проект будет расширяться:
-            появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-            БЭМ-структура и адаптивная версия сайта.
+            В каталоге AEGIS COSPLAY представлены костюмы
+            в разных стилях: фэнтези, мифология, игры
+            и оригинальные авторские образы.
         </p>
+
+        <a
+                class="button button--secondary"
+                href="catalog.html"
+        >
+            Перейти в каталог
+        </a>
+
     </aside>
 
 </main>
 
-<footer class="site-footer" id="contacts">
+
+<!-- ---------------------- -->
+<!-- Подвал -->
+
+<footer
+        class="site-footer"
+        id="contacts"
+>
+
     <p class="site-footer__text">
-        &copy; 2026 Учебный проект. Все права защищены.
+        &copy; 2026 AEGIS COSPLAY. Все права защищены.
     </p>
 
     <p class="site-footer__text">
-        Дисциплина: Фронтенд и бэкенд разработка
+        Учебный проект по дисциплине
+        «Фронтенд и бэкенд разработка»
     </p>
+
 </footer>
+
+
+<!-- ---------------------- -->
+<!-- Модальное окно заказа -->
 
 <dialog
         class="order-dialog"
         id="order-dialog"
         aria-labelledby="order-dialog-title"
 >
+
     <h2
             class="order-dialog__title"
             id="order-dialog-title"
     >
-        Оформление заявки
+        Оформление заказа
     </h2>
 
-    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+
+    <!-- Форма заказа -->
+    <form
+            class="order-form"
+            id="order-form"
+            action="#"
+            method="post"
+            novalidate
+    >
+
+
+        <!-- Скрытое поле хранит выбранный товар -->
         <input
                 class="order-form__hidden"
                 id="selected-product"
@@ -169,8 +456,16 @@
                 type="hidden"
         >
 
+
+        <!-- ---------------------- -->
+        <!-- Имя -->
+
         <div class="order-form__field">
-            <label class="order-form__label" for="order-name">
+
+            <label
+                    class="order-form__label"
+                    for="order-name"
+            >
                 Имя
             </label>
 
@@ -184,10 +479,19 @@
                     autocomplete="given-name"
                     required
             >
+
         </div>
 
+
+        <!-- ---------------------- -->
+        <!-- Электронная почта -->
+
         <div class="order-form__field">
-            <label class="order-form__label" for="order-email">
+
+            <label
+                    class="order-form__label"
+                    for="order-email"
+            >
                 E-mail
             </label>
 
@@ -200,10 +504,19 @@
                     autocomplete="email"
                     required
             >
+
         </div>
 
+
+        <!-- ---------------------- -->
+        <!-- Телефон -->
+
         <div class="order-form__field">
-            <label class="order-form__label" for="order-phone">
+
+            <label
+                    class="order-form__label"
+                    for="order-phone"
+            >
                 Телефон
             </label>
 
@@ -221,10 +534,19 @@
             <small class="order-form__hint">
                 Формат: +7 (900) 000-00-00
             </small>
+
         </div>
 
+
+        <!-- ---------------------- -->
+        <!-- Дата связи -->
+
         <div class="order-form__field">
-            <label class="order-form__label" for="order-date">
+
+            <label
+                    class="order-form__label"
+                    for="order-date"
+            >
                 Дата связи
             </label>
 
@@ -234,10 +556,19 @@
                     name="date"
                     type="date"
             >
+
         </div>
 
+
+        <!-- ---------------------- -->
+        <!-- Тема заявки -->
+
         <div class="order-form__field">
-            <label class="order-form__label" for="order-topic">
+
+            <label
+                    class="order-form__label"
+                    for="order-topic"
+            >
                 Тема заявки
             </label>
 
@@ -247,15 +578,37 @@
                     name="topic"
                     required
             >
-                <option value="">Выберите тему</option>
-                <option value="product">Заказ товара</option>
-                <option value="consultation">Консультация</option>
-                <option value="delivery">Доставка</option>
+
+                <option value="">
+                    Выберите тему
+                </option>
+
+                <option value="product">
+                    Заказ костюма
+                </option>
+
+                <option value="consultation">
+                    Консультация
+                </option>
+
+                <option value="delivery">
+                    Доставка
+                </option>
+
             </select>
+
         </div>
 
+
+        <!-- ---------------------- -->
+        <!-- Комментарий -->
+
         <div class="order-form__field">
-            <label class="order-form__label" for="order-comment">
+
+            <label
+                    class="order-form__label"
+                    for="order-comment"
+            >
                 Комментарий
             </label>
 
@@ -264,11 +617,21 @@
                     id="order-comment"
                     name="comment"
                     rows="4"
-                    placeholder="Укажите дополнительную информацию"
+                    placeholder="Укажите размер костюма или дополнительную информацию"
             ></textarea>
+
         </div>
+
+
+        <!-- ---------------------- -->
+        <!-- Согласие на обработку данных -->
+
         <div class="order-form__field order-form__field--checkbox">
-            <label class="order-form__label order-form__label--checkbox">
+
+            <label
+                    class="order-form__label order-form__label--checkbox"
+            >
+
                 <input
                         class="order-form__input order-form__input--checkbox"
                         id="order-agreement"
@@ -276,10 +639,19 @@
                         type="checkbox"
                         required
                 >
+
                 Я согласен на обработку данных
+
             </label>
+
         </div>
+
+
+        <!-- ---------------------- -->
+        <!-- Кнопки формы -->
+
         <div class="order-form__actions">
+
             <button
                     class="button button--secondary"
                     type="button"
@@ -288,19 +660,31 @@
                 Закрыть
             </button>
 
+
             <button
                     class="button button--primary"
                     type="submit"
             >
-                Отправить заявку
+                Отправить заказ
             </button>
+
         </div>
+
     </form>
+
+
+    <!-- Сообщение появляется после успешной отправки -->
+    <p
+            class="success-message"
+            id="success-message"
+            hidden
+    >
+        Заказ успешно оформлен!
+    </p>
+
 </dialog>
 
-<p class="success-message" id="success-message" hidden>
-    Форма успешно отправлена!
-</p>
 
 </body>
+
 </html>
