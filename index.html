@@ -99,7 +99,7 @@
                 <li class="site-nav__item">
 
                     <!-- Якорная ссылка ведёт к блоку популярных товаров -->
-                    <a
+                    <a 
                             class="site-nav__link"
                             href="#popular"
                     >
@@ -152,22 +152,36 @@
 
     <section class="hero">
 
-        <h1>
-            Создай образ своего героя
-        </h1>
+        <div class="hero__content">
 
-        <p>
-            Косплей-костюмы и аксессуары для фестивалей,
-            фотосессий и ярких перевоплощений.
-        </p>
+            <h1 class="hero__title">
+                Создай образ своего героя
+            </h1>
 
-        <!-- Якорная ссылка ведёт к популярным товарам -->
-        <a
-                class="button button--primary"
-                href="#popular"
-        >
-            Смотреть костюмы
-        </a>
+            <p class="hero__text">
+                Косплей-костюмы и аксессуары для фестивалей,
+                фотосессий и ярких перевоплощений.
+            </p>
+
+            <!-- Якорная ссылка ведёт к популярным товарам -->
+            <a
+                    class="button button--primary hero__button"
+                    href="#popular"
+            >
+                Смотреть костюмы
+            </a>
+
+        </div>
+
+        <div class="hero__image-wrapper">
+
+            <img
+                    class="hero__image"
+                    src="images/dark-huntress.jpg"
+                    alt="Косплей-образ героя"
+            >
+
+        </div>
 
     </section>
 
@@ -407,6 +421,7 @@
 <footer
         class="site-footer"
         id="contacts"
+
 >
 
     <p class="site-footer__text">
